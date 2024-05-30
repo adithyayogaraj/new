@@ -1,0 +1,12 @@
+function Run() {
+    var delay = 3000;   //-- 3 seconds
+    $( '#message' ).text('Please wait ' + delay + ' seconds...');
+    var start = new Date().getTime();
+    while (true) {
+        current = new Date().getTime();
+        if ( (start + delay) < current) {
+            break;
+        }
+    }
+    $( '#message' ).text('Done');
+}
